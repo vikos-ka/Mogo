@@ -1,0 +1,85 @@
+.map 
+    background-image: url(../../img/map.png)
+    background-color: $overlay
+    background-blend-mode: overlay
+    background-size: cover
+    position: center
+    width: 100%
+    background-repeat: no-repeat
+
+    .header 
+        padding-top: 5%
+        padding-bottom: 3%
+        line-height: .5em
+    
+    a 
+        text-decoration: none
+        color: $second-hover-color
+        transition: $transition
+
+    a:hover
+        text-decoration: underline 
+
+    .title 
+        font-size: 1.5em
+        margin: 0
+        margin-top: 13%
+
+        &:after 
+            margin: 15% auto
+
+    img 
+        width: 17%
+
+@media screen and (max-width: 992px) 
+    .map 
+        width: 100%
+        .title 
+            font-size: 1em
+            margin: 0
+            margin-top: 10%
+        img 
+            width: 17%
+    .map:after 
+        margin: 10% auto
+
+@media screen and (max-width: 768px) 
+    .map 
+        width: 100%
+
+@media screen and (max-width: 576px) 
+    .map 
+        width: 100%
+
+/*footer*/
+
+.mogo__footer 
+    background-color: #f8f8f8
+
+.footer__wrapper 
+    width: 80%
+    margin: 0 auto
+
+.footer__grid-container
+    display: grid
+    grid-template-columns: 40% 30% 22%
+    grid-template-rows: 1fr
+    grid-column-gap: 4%
+    padding: 7.5% 0
+
+@media screen and (max-width: 992px) 
+    .footer__grid-container 
+        padding: 5% 0
+
+@media screen and (max-width: 768px) 
+    .footer__grid-container
+        grid-template-columns: 45% 45%
+        grid-template-rows: 2fr 3fr
+        grid-column-gap: 10%
+        padding: 7.5% 0
+
+@media screen and (max-width: 576px) 
+    .footer__grid-container 
+        display: flex
+        flex-direction: column
+

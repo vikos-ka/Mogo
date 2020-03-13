@@ -1,0 +1,70 @@
+.mogo-blogs__box 
+    color: #777777
+
+.box__title 
+    font-size: .87em
+    padding-bottom: 40px
+    text-transform: uppercase
+    color: $black-color
+
+.blog-item 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 30px
+    
+    .blog-img 
+        width: 38%
+
+        img 
+            width: 100%
+            height: 100%
+
+    .blog__content 
+        width: 58%
+        
+        time 
+            font-family: $secondary-font
+            font-weight: lighter
+            color: #adadad
+            font-style: italic
+            font-size: .81em
+            padding: 12px 0 7px
+
+.blog-header a 
+    text-transform: uppercase
+    text-decoration: none
+    font-size: .75em
+    padding-top: 21px
+    color: $black-color
+    transition: color $transition
+    
+    &:hover 
+        color: $second-hover-color
+
+@media screen and (max-width: 992px) 
+    .box__title 
+        font-size: .65em
+        padding-bottom: 20px
+
+    .blog__content time 
+        font-size: .6em
+    
+    .blog-item 
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-bottom: 15px
+        line-height: 1
+    
+    .blog-header a 
+        font-size: .65em
+
+
+@media screen and (max-width: 768px) 
+    .box__title 
+        font-size: .87em
+        padding-bottom: 30px
+
+    .blog__content time 
+        font-size: .7em

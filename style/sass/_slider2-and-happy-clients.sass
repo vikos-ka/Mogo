@@ -1,0 +1,123 @@
+.quote2 .quote__box 
+    padding: 9% 7% 12% 30%
+    
+    .quote__image 
+        border: 0
+        padding: 0
+        top: 15%
+        left: 7%
+        width: 22%
+       
+        img 
+            border-radius: 50%
+            width: 100%
+
+    &:after 
+        top: 40%
+
+    &:before 
+        top: 40%
+
+@media screen and (max-width:1200px) 
+    .quote2 
+        .quote__image 
+            width: 20%
+    
+@media screen and (max-width:992px) 
+    .quote2 
+        .quote__box 
+            padding: 7% 5% 7% 26%
+            
+            .quote__image 
+                width: 16%
+
+@media screen and (max-width:992px) 
+
+    .quote2 
+        .quote__image 
+            display: none
+        .quote__box 
+            padding: 7% 10% 7% 20%
+
+
+/*happy clients*/
+
+.happy-clients
+    background-image: url(../../img/peoplesay.png)
+    background-color: #f0f0f0
+    background-blend-mode: overlay
+    background-size: cover
+    position: center
+    background-repeat: no-repeat
+
+.happy-clients__container 
+    @extend %container
+    flex-direction: row
+    justify-content: space-between
+    flex-wrap: wrap
+    padding-bottom: 60px
+
+.happy-clients__item 
+    position: relative
+    width: 46%
+    text-align: left
+    padding-left: 141px
+    box-sizing: border-box
+    margin-bottom: 70px
+    color: #333333
+
+    .happy-clients__img 
+        border-radius: 50%
+        position: absolute
+        left: 0
+        max-width: 112px
+        
+        img
+            width: 100%  
+
+    .happy-clients__name 
+        font-size: .87em
+        text-transform: uppercase
+        margin: 15px 0
+
+    .happy-clients__title 
+        font-family: $secondary-font
+        font-size: .9em
+        font-style: italic
+
+        &:after 
+            content: ""
+            display: block
+            width: 60px
+            height: 3px
+            background-color: $second-hover-color
+            margin: 17px 0 24px
+
+    .happy-clients__text 
+        font-size: .9em
+        font-family: $secondary-font
+        color: $grey-color
+        text-align: start
+
+@media screen and (max-width:992px) 
+    .happy-clients__container 
+        padding-bottom: 30px
+
+    .happy-clients__item 
+        padding-left: 80px
+        margin-bottom: 40px
+
+        .happy-clients__img 
+            max-width: 70px
+
+@media screen and (max-width:576px) 
+    .happy-clients__container 
+        flex-direction: column
+
+    .happy-clients__item 
+        width: 90%
+
+        .happy-clients__img 
+            width: 18%
+            top: 10%
+    

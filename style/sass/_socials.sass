@@ -1,0 +1,72 @@
+
+.instagram__container 
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr 1fr
+    grid-column-gap: 2px
+    grid-row-gap: 2px
+    padding-bottom: 20px
+
+.instagram__img 
+    width: 88px
+    height: 88px
+
+    img 
+        width: 100%
+        height: 100%
+
+.mogo-instagram__details 
+    text-decoration: none
+    font-family: $secondary-font
+    font-weight: lighter
+    color: #777777
+    font-style: italic
+    font-size: .81em
+    padding: 12px 0 7px
+    padding-top: 20px
+
+    &:hover 
+    text-decoration: underline
+
+.mogo__copyright 
+    font-size: .9em
+    margin: 1.5em auto
+    text-align: center
+    padding-bottom: 1.5em
+
+.mogo__copyright span 
+    color: $second-hover-color
+
+@media screen and (max-width: 992px) 
+    .instagram__container 
+        padding-bottom: 10px
+    
+    .instagram__img 
+        width: 60px
+        height: 60px
+
+    .mogo-instagram__details 
+        font-size: .6em
+        padding: 5px 0 5px
+        padding-top: 10px
+    
+    .mogo__copyright 
+        font-size: .6em
+
+@media screen and (max-width: 768px) 
+    
+    .instagram__img 
+        width: 78px
+        height: 78px
+    
+    .mogo-instagram__details 
+        font-size: .8em
+
+@media screen and (max-width: 576px) 
+    
+    .instagram__img 
+        width: 100%
+        height: 100%
+
+    .mogo-instagram__details 
+        font-size: .8em

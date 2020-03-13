@@ -1,0 +1,131 @@
+.mogo-summery__title 
+    font-size: 2.13em
+    margin-bottom: 1.25em
+    font-weight: 700
+    color: $summery-color
+    margin-block-start: 0
+
+.mogo-summery__text 
+    color: $summery-color
+    font-family: $secondary-font
+    font-size: .9em
+    margin-bottom: 2.2em
+    margin-block-start: 0
+
+.mogo__followers 
+    font-size: .9em
+    margin: 1.3em 0
+
+.footer__wrapper hr 
+    margin: 0
+
+.mogo__follow 
+    color: $summery-color
+    font-family: $secondary-font
+    font-style: italic
+    font-weight: lighter
+    font-size: .95em
+    margin: 1.2em 0 2em
+
+.mogo__follow svg 
+    color: $shadow
+    margin-left: .8em
+    cursor: pointer
+
+    &:hover
+    color: $second-hover-color
+
+form 
+    display: flex
+
+    input:first-child 
+        width: 230px
+        height: 40px
+        box-sizing: border-box
+        border: 1px solid $summery-color
+        color: #d6d6d6
+        padding: .8em 0 .8em .8em
+        font-family: $secondary-font
+        font-style: italic
+        font-weight: 300
+        font-size: .95em
+
+    input:last-child 
+        width: 150px
+        height: 40px
+        box-sizing: border-box
+        font-size: .87em
+        text-transform: uppercase
+        padding: .87em 2.2em
+        font-weight: 700
+        color: $white-color
+        background-color: $shadow
+        border: 0
+        cursor: pointer
+        transition: background-color $transition
+
+        &:hover 
+            background-color: $second-hover-color
+
+@media screen and (max-width: 992px) 
+    .mogo-summery__title 
+        font-size: 1.5em
+        margin-bottom: 1em
+
+    .mogo-summery__text 
+        font-size: .7em
+        margin-bottom: 2em
+
+    .mogo__followers 
+        font-size: .7em
+        margin: 1em 0
+
+    .mogo__follow 
+        font-size: .7em
+        margin: 1em 0 1.5em
+
+        svg 
+            margin-left: .5em
+        
+        form input
+            &:first-child 
+                width: 170px
+                height: 30px
+                border: 1px solid $summery-color
+                color: #d6d6d6
+                padding: .6em 0 .6em .6em
+                font-size: .6em
+    
+            &:last-child 
+                width: 100px
+                height: 30px
+                font-size: .6em
+                padding: .87em 2.2em
+
+@media screen and (max-width: 776px) 
+    .mogo-summery__box 
+        grid-column-start: 1
+        grid-column-end: 3
+        margin-bottom: -20%
+
+    .mogo-summery__title 
+        text-align: center
+    
+    .mogo__followers 
+        text-align: center
+
+    .mogo__follow 
+        text-align: center
+
+        svg 
+            margin-left: .5em
+    
+    .mogo__socials form 
+        margin-left: 0 auto
+    
+
+@media screen and (max-width: 576px)
+    .mogo-summery__box 
+        margin-bottom: 5%
+
+    

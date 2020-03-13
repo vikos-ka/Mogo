@@ -1,0 +1,114 @@
+.block__services 
+    @extend %container
+    flex-direction: row
+    flex-wrap: wrap
+    margin: 20px auto
+    justify-content: space-evenly
+    margin-bottom: 120px
+
+.services__item 
+    width: 27%
+    padding-left: 6.3%
+    position: relative 
+    
+    img 
+        position: absolute
+        top: 0
+        left: 0
+        width: 8%
+
+
+.services__title 
+    font-size: .9em
+    color: $black-color
+    text-transform: uppercase
+    margin-top: 0
+
+.services__text 
+    font-size: .87em
+    color: $grey-color
+
+
+@media screen and (max-width: 992px) 
+    .services__title 
+        font-size: .7em
+    
+    
+    .services__text 
+        font-size: .6em
+    
+
+
+@media screen and (max-width: 768px) 
+    .services__item 
+        width: 40%
+        margin-left: 2%
+        margin-bottom: 2%
+    
+    .block__services hr 
+        display: none
+    
+
+@media screen and (max-width: 576px) 
+    .block__services 
+        display: flex
+        flex-direction: column
+        align-content: center
+        margin-bottom: 10%
+    
+        .services__item 
+            width: 50%
+            margin: 0
+            margin-bottom: 5%
+
+
+/*design*/
+.design 
+    background-image: url(../../img/design-background.png)
+    background-color: $overlay
+    background-blend-mode: overlay
+    background-size: cover
+    background-repeat: no-repeat
+
+.devices 
+    max-width: 600px
+    margin: 0 auto
+    position: relative
+
+.devices__item 
+    display: block
+
+.devices__item.phone 
+    position: absolute
+    top: 35%
+    left: 60%
+
+@media screen and (max-width: 992px)
+
+    .devices 
+        max-width: 400px
+        margin: 0 auto
+        position: relative
+
+    .devices__item.tab 
+        width: 300px
+    .devices__item.phone 
+        width: 200px
+        position: absolute
+        top: 25%
+        left: 60%
+
+@media screen and (max-width: 376px) 
+    .devices 
+        max-width: 375px
+        margin: 0 auto
+        position: relative
+
+    .tab 
+        width: 200px
+
+    .phone 
+        width: 100px
+        position: absolute
+        top: 30%
+        left: 70%

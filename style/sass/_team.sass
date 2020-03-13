@@ -1,0 +1,100 @@
+.team__container 
+    flex-direction: row
+    justify-content: space-between
+    margin-bottom: 8.5%
+    @extend %container
+    
+
+.team__item 
+    width: 32%
+
+    .shadow__team 
+        background-color: $shadow
+        transition: transform $transition
+        z-index: 0  
+
+
+    .img__container 
+        background: linear-gradient(to bottom, #db7977, #f7d891)
+        transition: translate $transition
+
+        >img 
+            width: 100%
+            display: block
+            opacity: 1
+            position: relative
+
+
+.img__hover-icon 
+    display: flex
+    top: 45%
+    left: 30%
+    position: absolute
+    visibility: hidden
+
+    a 
+        color: $second-hover-color
+        padding: 15px
+        border-right: 1px solid #f9bd87
+        background-color: $main-hover-color
+
+    &:last-child 
+        border-right: 0
+
+.team__item:hover .img__container 
+    transform: translate3d(-10px, -10px, 0)
+
+
+.team__item:hover .img__container img 
+    opacity: .1
+
+
+.team__item:hover .img__hover-icon 
+    visibility: visible
+    z-index: 100
+
+.img__hover-icon a:hover 
+    color: $white-color
+    background-color: $second-hover-color
+
+.team__name 
+    margin-top: 30px
+    font-size: .87em
+    text-transform: uppercase
+    text-align: center
+
+.team__title 
+    color: #a8a8a8
+    font-size: .9e
+    font-style: italic
+    font-family: $secondary-font
+    text-align: center
+
+@media screen and (max-width: 992px) 
+    .img__hover-icon 
+        top: 50%
+        +transform(translateY(-50%))
+
+        a 
+            padding: 10px
+
+@media screen and (max-width: 768px) 
+    .team__container 
+        display: flex
+        flex-direction: column
+    
+    .team__item 
+        width: 90%
+        margin: 0 auto
+        margin-top: 5%
+
+    .team__name 
+        margin-top: 2%
+
+    .img__hover-icon a 
+        padding: 15px
+
+    .img__hover-icon
+        left: 30%
+
+    

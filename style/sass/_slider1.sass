@@ -1,0 +1,125 @@
+.quote 
+    background-color: #f8f8f8
+
+.quote__container 
+    @extend %container
+
+
+.quote__box 
+    width: calc(100%-50px)
+    margin: 0 auto
+    position: relative
+    padding: 7.5% 7% 7% 28%
+
+    .quote__image 
+        position: absolute
+        padding: 5%
+        border: 1px solid #95e1d3
+        top: 20%
+        left: 10%
+
+.quote__author 
+    font-family: $header-font
+    font-size: 1.4em
+    font-style: italic
+    padding: 3.5% 10.5%
+    position: relative
+
+    &:before 
+        content: ""
+        display: block
+        width: 60px
+        height: 3px
+        background-color: $second-hover-color
+        position: absolute
+        top: 50%
+        left: 0
+
+.quote__text 
+    font-family: $secondary-font
+    font-size: 1.4em
+    font-weight: 300
+    font-style: italic
+    color: $grey-color
+
+.quote__box
+    &:before 
+        content: url(../../img/arrow_left.png)
+        display: block
+        position: absolute
+        top: 50%
+        left: 0
+        padding-left: 24px
+
+    &:after 
+        content: url(../../img/arow_right.png)
+        display: block
+        position: absolute
+        top: 50%
+        left: 100%
+
+
+
+@media screen and (max-width: 1200px) 
+    .quote__author 
+        font-size: 1.2em
+
+    .quote__text 
+        font-size: 1.2em
+
+
+@media screen and (max-width: 992px) 
+    .quote__box 
+        padding: 7% 7% 5% 25%
+    
+    .quote__image 
+        position: absolute
+        padding: 3%
+        top: 25%
+        left: 9%
+
+        img
+            width: 50px
+
+
+    .quote__author 
+        font-size: 1em
+        padding: 3.5% 8%
+
+    
+    .quote__author
+        &:before 
+            width: 40px
+            height: 1px
+    
+    .quote__text 
+        font-size: 1em
+    
+
+@media screen and (max-width: 768px) 
+    .quote__box 
+        padding: 7% 7% 5% 25%
+    
+    .quote__image 
+        top: 30%
+        img
+            width: 30px
+    
+    .quote__author
+        &:before 
+            width: 30px
+    
+    .quote__text 
+        font-size: .8em
+
+@media screen and (max-width: 576px) 
+    .quote__author
+        &:before
+            width: 20px
+
+    .quote__image 
+        display: none
+
+    .quote__box 
+        padding: 7.5% 7% 7% 15%
+    

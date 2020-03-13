@@ -1,0 +1,147 @@
+.works__container 
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-bottom: 100px
+
+
+.shadow__works
+    margin-right: 1.8em
+    width: 30%
+    background-color: $shadow
+
+.shadow__works:last-child 
+    margin-right: 0
+
+
+.img__container 
+    background: linear-gradient(to bottom, #db7977, #f7d891)
+    transition: $transition
+
+.img__container
+    >img 
+        width: 100%
+        display: block
+        opacity: 1
+        position: relative
+    
+    .img__hover-text 
+        color: $white-color
+        text-transform: uppercase
+        font-size: 1.2em
+        font-weight: 700
+        top: 45%
+        left: 30%
+        position: absolute
+        visibility: hidden
+
+.shadow__works:hover .img__container 
+    transform: translate3d(-10px, -10px, 0)
+
+
+.shadow__works:hover .img__container>img 
+    opacity: .1
+
+
+.shadow__works:hover .img__hover-text 
+    visibility: visible
+
+
+@media screen and (max-width:992px) 
+    .img__hover-text 
+        font-size: .7em
+        top: 50%
+        left: 35%  
+
+@media screen and (max-width:576px) 
+    .works__container 
+        flex-direction: column
+        align-content: space-between
+        margin-bottom: 50px
+
+        .shadow__works 
+            margin: 10px auto
+            width: 90%
+            background-color: $shadow
+    
+        .shadow__works
+            &:last-child 
+                margin: 10px auto
+
+            .img__hover-text 
+                font-size: .9em
+
+
+/*Numbers*/
+
+.numbers 
+    background-color: $shadow
+
+
+.numbers__container 
+    @extend %container
+    flex-direction: row
+    justify-content: space-between
+   
+
+
+.numbers__block 
+    width: 20%
+    display: flex
+    flex-direction: column
+    align-content: center
+    text-align: center
+    border-left: 1px solid $border-color
+    color: white
+
+    .number 
+        font-weight: 700
+        font-size: 6em
+        color: white
+        padding-top: 45%
+
+    &:last-child 
+        border-right: 1px solid $border-color
+
+    .numbers__text 
+        text-transform: uppercase
+        font-size: .9em
+        padding-bottom: 45%
+
+@media screen and (max-width: 1200px) 
+    .number 
+        font-size: 5em
+    
+
+@media screen and (max-width: 992px) 
+    .number 
+        font-size: 4em
+        padding-top: 30%
+
+    .numbers__text 
+        font-size: .6em
+        padding-bottom: 30%
+    
+
+@media screen and (max-width: 768px)
+    .numbers__container
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-between
+
+        .numbers__block 
+            width: 30%
+            border: 0
+
+            &:last-child 
+                border-right: 0
+
+@media screen and (max-width:576px) 
+    
+    .number 
+        font-size: 4em
+        padding-top: 20%
+
+    .numbers__text 
+        font-size: .8em
+        padding-bottom: 20%

@@ -1,0 +1,130 @@
+
+.clients 
+    background-color: #f8f8f8
+
+.clients__container 
+    width: 80%
+    margin: 0 auto
+    padding: 4.2% 0
+
+    img 
+        width: 100%
+
+/*works*/
+
+.works__box 
+    width: 100%
+    margin: 0 auto
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: minmax(390px auto) minmax(390px auto)
+
+.img__container 
+    background: linear-gradient(to bottom, #db7977, #f7d891)
+    position: relative
+
+    >img 
+        width: 100%
+        display: block
+        opacity: 1
+        position: relative
+        transition: $transition
+
+
+.works-img-full 
+    grid-row-start: 1
+    grid-row-end: 3
+    grid-column-start: 3
+    grid-column-end: 4
+
+    img 
+        height: 100%
+
+    .hover__text 
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: absolute
+        top: 40%
+        left: 25%
+
+.hover__text 
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: absolute
+    top: 40%
+    left: 25%
+    visibility: hidden
+
+.hover__text 
+    div:first-of-type 
+        font-size: .87em
+        text-transform: uppercase
+        margin: 20px auto 15px
+        color: $white-color
+
+.hover__text 
+    div:last-child 
+        font-family: $secondary-font
+        font-style: italic
+        font-size: .9em
+        color: $white-color
+
+.img__container:hover.img__container>img 
+    opacity: .1
+
+.img__container:hover .hover__text 
+    visibility: visible
+    z-index: 100
+
+@media screen and (max-width:992px) 
+    .hover__text 
+        div:first-of-type 
+            font-size: .6em
+            margin: 20px auto 15px
+
+@media screen and (max-width:768px) 
+    .hover__text 
+        img 
+            width: 15px
+    
+
+    .hover__text 
+        left: 15%
+
+    .works-img-full 
+        .hover__text 
+            top: 45%
+            left: 18%
+    
+
+    .hover__text 
+        div
+            &:first-of-type 
+                margin: 10px auto 5px
+    
+            &:last-child       
+                font-size: .6em
+
+@media screen and (max-width:576px) 
+    .works__box 
+        grid-template-columns: 50% 50%
+        grid-template-rows: repeat(4, minmax(auto, 240px))
+
+    .works-img-full 
+        grid-row-start: 3
+        grid-row-end: 5
+        grid-column-start: 2
+        grid-column-end: 3
+        order: -1
+
+    .hover__text 
+        left: 30%
+    
+
+@media screen and (max-width:375px)
+    .hover__text 
+        left: 20%
+
+
